@@ -23,7 +23,7 @@ const ProductProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    getData();
+    getData()
   }, [search]);
 
   const values = { products, loading, search, setSearch };

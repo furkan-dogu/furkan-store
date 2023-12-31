@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 const ProductDetail = () => {
   const {state} = useLocation()
   const navigate = useNavigate()
   const { thumbnail, title, description, category, price, images } = state;
+  const [selectedImage, setSelectedImage] = useState(thumbnail)
 
   return (
     <div className="container">
@@ -14,15 +15,15 @@ const ProductDetail = () => {
             <div className="w-full row-span-3">
               <img
                 className="h-full w-full rounded-lg"
-                src={thumbnail}
+                src={selectedImage}
                 alt=""
               />
             </div>
             <div className="grid grid-cols-3 gap-4 row-span-1">
               {images.slice(0, images.length - 2).map((item, i) => (
-                <div key={i}>
+                <div key={i} onClick={() => setSelectedImage(item)}>
                   <img
-                    className="h-[15vh] w-full rounded-lg"
+                    className="h-[15vh] w-full rounded-lg cursor-pointer"
                     src={item}
                     alt=""
                     loading="lazy"

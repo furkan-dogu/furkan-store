@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useAuthContext } from "../context/AuthProvider";
+import Swal from 'sweetalert2'
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -9,12 +10,16 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
-      email.toLowerCase() === "admin@aa.com" &&
+      email.toLowerCase() === "admin@abc.com" &&
       password.toLowerCase() === "admin"
     ) {
       login({ email, password });
     } else {
-      alert("Kullanıcı bilgileri yanlış");
+      Swal.fire({
+        icon: "error",
+        title: "Incorrect Login",
+        text: "Click on email and password",
+      });
     }
   };
 
@@ -35,7 +40,7 @@ const Login = () => {
           <div className="flex flex-col justify-start gap-2 mt-2">
             <label
               htmlFor="email"
-              className="login-label hover:after:content-['admin@aa.com']"
+              className="login-label hover:after:content-['admin@abc.com']"
             >
               Email
             </label>
