@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .login-label {
+        @apply text-gray-600 hover:after:pl-3 hover:after:text-black hover:after:underline cursor-pointer
+    }
+
+    .login-input {
+        height:44px;
+        border-radius: 4px;
+        border:1px solid #e5e5e5;
+        padding: 0.6rem;
+        @apply focus:outline-orange-500 focus:caret-orange-500
+    }
+
+    .login-input::placeholder{
+        color: #CDCDCD;
+        @apply font-montserrat text-[12px] font-[400];
+    }
+}
+
