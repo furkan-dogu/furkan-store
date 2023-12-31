@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const About = () => {
   return (
-    <div className='py-12 bg-gray-200 min-h-screen'>
+    <div className='py-12'>
       <div className="max-w-screen-xl mx-auto px-4 text-center md:px-8">
         <div className="max-w-xl mx-auto">
           <h3 className='text-4xl font-semibold'>Meet My Team</h3>
@@ -16,7 +16,7 @@ const About = () => {
           {team.map((item, index) =>(
               <div key={index}>
                 <div className="mx-auto">
-                  <img src={item.avatar} alt={item.name} className='w-32 h-32 rounded-full mx-auto' />
+                  <img src={item.avatar} alt={item.name} className='w-20 h-20 rounded-full mx-auto' />
                 </div>
                 <div className='mt-2'>
                   <h4 className='font-semibold text-2xl'>{item.name}</h4>
