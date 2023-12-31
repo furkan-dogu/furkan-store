@@ -24,8 +24,6 @@ const AuthProvider = ({ children }) => {
     sessionStorage.setItem("user",JSON.stringify(user))
   },[user])
 
-
-
   return (
     <AuthContext.Provider value={{ user, login, logout }}>
       {children}

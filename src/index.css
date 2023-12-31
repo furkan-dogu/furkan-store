@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-
+    
     .login-label {
         @apply text-gray-600 hover:after:pl-3 hover:after:text-black hover:after:underline cursor-pointer
     }
