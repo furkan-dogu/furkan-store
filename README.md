@@ -8,6 +8,14 @@
 
 In the project I created with React, after entering the login information, you are directed to a site consisting of home, products, and about pages. On this site, you can explore many products and view additional images of the desired product. The about section contains information about our team, along with links to their GitHub and LinkedIn profiles for further interaction.
 
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Usage](#usage)
+- [Project Skeleton](#project-skeleton)
+- [Screenshots](#screenshots)
+
 ## Live Demo
 
 [Furkan Store](https://furkan-store.vercel.app/)
